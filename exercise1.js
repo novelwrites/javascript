@@ -1,12 +1,36 @@
 //Complete the following problems: 
 
 // Problem 1:
-// Part 1: Write a JavaScript function that converts the current temperature from Fahrenheit to Celsius. Declare a variable for the current temperature then store the Celsius temperature into a variable. Console log the variable.
+/* Part 1: Write a JavaScript function that converts the current temperature 
+from Fahrenheit to Celsius. Declare a variable for the current temperature then 
+store the Celsius temperature into a variable. Console log the variable.*/
+
+//declare variable for current temperature in fahrenheit - user defines value
+var currentTempf = prompt('What is the current temp (F)?');
+console.log(currentTempf);
+
+let conversionFC = function(currentTempf) {
+console.log("conversion function")
+     var celsius = (currentTempf - 32) * 5 / 9;
+    console.log(celsius);   
+}
+
+conversionFC(currentTempf)
 
 // Part 2: Write another funciton that converts the Celsius temperature back to Fahrenheit. 
-
 //your code...
 
+//I wanted to use initial celsius value obtained in Problem 1 but it comes up 
+//undefined - why?
+var celsius = 45;
+console.log(celsius);
+let conversionCF = function(celsius) {
+console.log("conversion function")
+     const fahrenheit = (celsius * 9 / 5 ) + 32;
+    console.log(fahrenheit);   
+}
+
+conversionCF(celsius)
 
 
 
@@ -14,11 +38,25 @@
 
 /************************************************************* */
 // Problem 2:
-// Write a JavaScript function to determine if someone is old enough to vote. Declare a variable for age and write a conditional statement for whether that age is old enough to vote. Console log "yes" or "no"
+// Write a JavaScript function to determine if someone is old enough to vote. 
+//Declare a variable for age and write a conditional statement for whether 
+//that age is old enough to vote. Console log "yes" or "no"
 
 //your code...
 
+var age = prompt('What is your age?');
+console.log(age);
 
+let oldenough = function(age) {
+    console.log("agecheck")
+    if (age < 18){
+        console.log("no");
+    }
+    else {
+        console.log("yes");
+    }
+}
+oldenough(age)
 
 
 
@@ -26,7 +64,9 @@
 
 /************************************************************* */
 // Problem 3:
-// Write a JavaScript function that converts a string to an array. Declare a string variable with "The five boxing wizards jump quickly." Use the split() method to turn the string into an array of strings. (Be sure you separate the string into words, not characters.) After you have finished, use the join() method to change the array back into a string.
+// Write a JavaScript function that converts a string to an array. Declare a string variable
+//with "The five boxing wizards jump quickly." Use the split() method to turn the 
+//string into an array of strings. (Be sure you separate the string into words, not characters.) After you have finished, use the join() method to change the array back into a string.
 
 //your code...
 
