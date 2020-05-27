@@ -6,7 +6,10 @@ from Fahrenheit to Celsius. Declare a variable for the current temperature then
 store the Celsius temperature into a variable. Console log the variable.*/
 
 //declare variable for current temperature in fahrenheit - user defines value
-/*
+//your code...
+
+//Nancy comment: Used prompt for user entry of temperature.
+
 var currentTempf = prompt('What is the current temp (F)?');
 console.log(currentTempf);
 
@@ -17,14 +20,15 @@ console.log("conversion function")
 }
 
 conversionFC(currentTempf)
-*/
+
 
 // Part 2: Write another funciton that converts the Celsius temperature back to Fahrenheit. 
 //your code...
 
-//I wanted to use initial celsius value obtained in Problem 1 but it comes up 
-//undefined - why?
-/*
+//Nancy comment: I wanted to use initial celsius value obtained in Problem 1 but it comes up 
+//undefined because it is outside of this new function so I set Celsius to a value of 45 for 
+//test purposes.
+
 var celsius = 45;
 console.log(celsius);
 let conversionCF = function(celsius) {
@@ -35,12 +39,6 @@ console.log("conversion function")
 
 conversionCF(celsius)
 
-*/
-
-
-
-
-
 /************************************************************* */
 // Problem 2:
 // Write a JavaScript function to determine if someone is old enough to vote. 
@@ -49,7 +47,9 @@ conversionCF(celsius)
 
 //your code...
 
-/*var age = prompt('What is your age?');
+//Nancy comment: Also used prompt here so user can enter their age.
+
+var age = prompt('What is your age?');
 console.log(age);
 
 let oldenough = function(age) {
@@ -63,8 +63,6 @@ let oldenough = function(age) {
 }
 oldenough(age)
 
-*/
-
 /************************************************************* */
 // Problem 3:
 // Write a JavaScript function that converts a string to an array. Declare a string variable
@@ -74,22 +72,19 @@ oldenough(age)
 
 //your code...
 
+//Nancy comment: (learning notes) code below creates the function. Stuff in parenthesis after 
+//function are parameters and stuff in-between curly braces executes when function is called.
 
-//code below creates the function. Stuff in parenthesis after function are 
-//parameters and stuff in-between curly braces executes when function is called.
 let converttoarray = function (wizards) {
     var separated=wizards.split(' ');
     console.log(separated)
     var join=separated.join(' ');
-    console.log(join)
-    
+    console.log(join)   
 
 }
 
-converttoarray("The five boxing wizards jump quickly."); //calls the function; values in () are arguements 
-//passed to the parameters.
-
-
+converttoarray("The five boxing wizards jump quickly."); //more learning notes: calls the function; 
+//values in () are arguments passed to the VREyeParameters.
 
 /************************************************************* */
 // Problem 4:
@@ -98,6 +93,8 @@ converttoarray("The five boxing wizards jump quickly."); //calls the function; v
 //method to convert a number into a string and reverse() method to reverse an array in place.
 
 //your code...
+
+//Nancy comment:This is fun! learning how to use commands :)
 
 let telephone = function (phoneNum) {
     var phoneArray=phoneNum.split('');
@@ -114,6 +111,8 @@ telephone("9727866430")
 //and model in that order.
 
 //your code...
+
+//Nancy comment: good exercise in using object and value.
 
 let mycar = function () {
 
@@ -142,6 +141,8 @@ mycar()
 
 //your code...
 
+//Nancy comment: Very cool to learn how to use modulus - remainder check capability is powerful!
+
 let loopCount = function(){
     for (let i = 0; i <=15; i++) {
         if(i%2==0){
@@ -154,7 +155,6 @@ let loopCount = function(){
 }
 loopCount()
 
-
 /************************************************************* */
 // Problem 7:
 // Write a JavaScript function that iterates the integers from 1 to 100. 
@@ -162,7 +162,11 @@ loopCount()
 //of 5, print "camp." For numbers that are multiples of both 3 and 5, print "TEKcamp."
 
 //your code...
-/*let multipleFun = function(){
+
+//Nancy comment: Didn't quite get there yet but I think I'm on the right track. Spent a lot of time
+//on this one. Fascinating problem will return to.
+
+let multipleFun = function(){
     
     for (let i = 1; i <=100; i++) {
         //console.log(i)
@@ -191,6 +195,10 @@ multipleFun()
 // and 9: the zeroth, third, sixth, and ninth values.
 
 //your code...
+
+//Nancy comment: I think I am close and that the logic is solid but I have a bug I need to 
+//figure out.
+
 let thirds = function (){
     var numArray = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
 for (let i=0; i<numArray.length; i++){
@@ -205,11 +213,22 @@ thirds ()
 
 
 // Problem 9:
-//const foodArray = [ 'potatoes', 'tamales', 'lemon','strawberries','chocolate', 'pudding',
-// {school : 'TEKcamp'} ];
+//const foodArray = [ 'potatoes', 'tamales', 'lemon','strawberries','chocolate', 'pudding', 
+//{school : 'TEKcamp'} ];
 //access the value of the last element of the array and set it to a variable called school.  
 //print the school variable to the console.
 
+//Nancy comment: This one works but I still plan on experimenting with it.
+let fooditems = function (){
+const foodArray = [ 'potatoes', 'tamales', 'lemon','strawberries','chocolate', 'pudding', {school : 'TEKcamp'} ]
+const i = foodArray.length - 1
+console.log(foodArray[i]);
+school = [i];
+console.log(foodArray[school.name]);
+}
+fooditems ()
+
+//Nancy comment: Ran out of time - will return to this in our study group.
 //const adjectiveArray = [ 'salty', 'spicy', 'sour', 'sweet', 'rich','creamy','amazing'];
 // Using both the foodArray and the adjectiveArray, make a
 // "for" loop that console.log()'s a sentence for each
