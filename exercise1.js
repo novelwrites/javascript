@@ -115,7 +115,22 @@ telephone("9727866430")
 
 //your code...
 
+let mycar = function () {
 
+    let mycar = {
+        make: "Chevrolet",
+        model: "Lumina",
+        year: "1997",
+        color: "maroon"
+    }
+    
+    console.log(mycar.year);
+    console.log(mycar.color);
+    console.log(mycar.make);
+    console.log(mycar.model);
+}
+
+mycar()
 
 
 
@@ -127,19 +142,19 @@ telephone("9727866430")
 
 //your code...
 
-let loopCount = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
-
-for (let i = 0; i < loopCount.length; i++) {
-    console.log(loopCount[i])
-}
-
-/*let conversionFC = function(currentTempf) {
-    console.log("conversion function")
-         var celsius = (currentTempf - 32) * 5 / 9;
-        console.log(celsius);   
+let loopCount = function(){
+    for (let i = 0; i <=15; i++) {
+        if(i%2==0){
+            console.log('even')
+        } else{
+            console.log('odd')
+        }
     }
-    
-    conversionFC(currentTempf)*/
+
+}
+loopCount()
+
+
 /************************************************************* */
 // Problem 7:
 // Write a JavaScript function that iterates the integers from 1 to 100. 
@@ -147,11 +162,30 @@ for (let i = 0; i < loopCount.length; i++) {
 //of 5, print "camp." For numbers that are multiples of both 3 and 5, print "TEKcamp."
 
 //your code...
+/*let multipleFun = function(){
+    
+    for (let i = 1; i <=100; i++) {
+        //console.log(i)
+        var calculation=i/3;
+        console.log(calculation)
+        if(calculation%2==0){
+        
+        console.log('multiple of 3');
+        }
+        //else if () {
+        //    console.log('multiple of 5');
+       // }
+  
+        else {
+            console.log('multiple of both')
+        }
+    
+multipleFun()
 
 
 /************************************************************* */
 // Problem 8:
-const nums = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
+//const nums = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
 // Write a "for" loop that console.log()'s the first
 // value in the nums array, and every 3rd number, i.e. 0, 3, 6,
 // and 9: the zeroth, third, sixth, and ninth values.
@@ -161,17 +195,15 @@ const nums = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
 
 
 // Problem 9:
-const foodArray = [ 'potatoes', 'tamales', 'lemon','strawberries','chocolate', 'pudding', {school : 'TEKcamp'} ];
+//const foodArray = [ 'potatoes', 'tamales', 'lemon','strawberries','chocolate', 'pudding', {school : 'TEKcamp'} ];
 //access the value of the last element of the array and set it to a variable called school.  print the school variable to the console.
 
-const adjectiveArray = [ 'salty', 'spicy', 'sour', 'sweet', 'rich','creamy','amazing'];
+//const adjectiveArray = [ 'salty', 'spicy', 'sour', 'sweet', 'rich','creamy','amazing'];
 // Using both the foodArray and the adjectiveArray, make a
 // "for" loop that console.log()'s a sentence for each
 // corresponding value in the arrays. Add the word "is" or "are" depending on if the food is singular or plural.  "Potatoes are salty", "Lemon is sour".
 
 /************************************************************* */
 // Bonus Assignment: Create 4 mathematical function expressions, add,subtract,multiply,divide.  put them in an array, and create a doMath() function that randomly does one of the 4 operations whenever it is run.  the doMath() function should print out what mathetmatical function was carried out.  The doMath() function should return the computed value of any operation performed.
-const operations = [];
-function doMath() {};
-
-
+//const operations = [];
+//function doMath() {};
