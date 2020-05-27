@@ -61,7 +61,8 @@ converttoarray("The five boxing wizards jump quickly.");
 /************************************************************* */
 // Problem 4:
 // Refactor the following code using a switch statement:
-/*
+/* 
+Original:
 const day = "friday";
 
 if(day === "monday") {
@@ -79,6 +80,30 @@ if(day === "monday") {
 }
 
 */
+//Nancy's modification changing code to use switch statement
+
+const day = "friday";
+switch (day) {
+     case "monday":
+     console.log("we got a long week ahead of us...");
+     break;
+     case "tuesday":
+     console.log("tuesday's are still better than mondays, but LONG way to go still");
+     break;
+     case "wednesday":
+     console.log("We are smack dab in the middle of the week");
+     break;
+     case "thursday":
+     console.log("Thursday night... the mood is right");
+     break;
+     case "friday":
+     console.log("TGIF.  Friday truly is the best day of the week!");
+     break;
+ default:    
+    console.log("It's a weekend!");
+}
+
+
 
 /************************************************************* */
 // Problem 5: Refactor the following functions to use a ternary expression:
@@ -94,6 +119,11 @@ if (age > 21) console.log("adult"); else {
 age > 21 ? console.log("adult") //if block
   :  console.log("minor");      //else block
 
+  //or
+
+  const age = age > 21 ? "adult" : "minor"
+  console.log(age);
+
   //Original
 
 if (age > 13 && age < 19) console.log('teen'); else {
@@ -105,6 +135,11 @@ if (age > 13 && age < 19) console.log('teen'); else {
 age > 13 && age < 19 ? console.log('teen') //if block
    : console.log("not a teenager");        //else block
 
+   //or
+
+   const age = age > 13 && age < 19 ? 'teen' : 'not a teenager'
+   console.log(age);
+
 //Original
 
 if (age > 65) console.log("retired"); else {
@@ -115,6 +150,11 @@ if (age > 65) console.log("retired"); else {
 
 age > 65 ? console.log("retired") //if block
   :console.log("still working");  //else block
+
+  //or
+
+  const age = age > 65 ? "retired" : "still working"
+   console.log(age);
 
 /************************************************************* */
 // Problem 6: Create an object literal that represents yourself.  set it to a variable that
