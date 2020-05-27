@@ -83,20 +83,38 @@ if(day === "monday") {
 /************************************************************* */
 // Problem 5: Refactor the following functions to use a ternary expression:
 
-/*
+//Original
 const age = 10;
 if (age > 21) console.log("adult"); else {
     console.log("minor");
 }
 
+//Nancy's modification:
+
+age > 21 ? console.log("adult") //if block
+  :  console.log("minor");      //else block
+
+  //Original
+
 if (age > 13 && age < 19) console.log('teen'); else {
     console.log("not a teenager");
 };
 
+//Nancy's modification:
+
+age > 13 && age < 19 ? console.log('teen') //if block
+   : console.log("not a teenager");        //else block
+
+//Original
+
 if (age > 65) console.log("retired"); else {
     console.log("still working...");
 }
-*/
+
+//Nancy's modification:
+
+age > 65 ? console.log("retired") //if block
+  :console.log("still working");  //else block
 
 /************************************************************* */
 // Problem 6: Create an object literal that represents yourself.  set it to a variable that
@@ -139,7 +157,7 @@ let student = { //student is the owner of the method
     }
 };
 console.log(student.learn());
-console.log(student.morelearn());
+//console.log(student.morelearn());
 //console.log(this.firstName + " " + this.lastName);
 /************************************************************* */
 // Problem 6: Create an object literal that represents any object in the real world that you like.  Try to come up with a realistic set of properties and methods that would accurately describe that object.  In at least one of your methods, use the this keyword to refer back to one of the properties you defined on this object literal.  
@@ -149,11 +167,31 @@ console.log(student.morelearn());
 
 
 /************************************************************* */
-//Problem 7: create a function that outputs your 3 favorite data types, with a message explaining why you like that data type.
+//Problem 7: create a function that outputs your 3 favorite data types, 
+//with a message explaining why you like that data type.
+
+/*let add = function ( num1, num2 ) {
+    var separated=wizards.split(' ');
+    console.log(separated)
+    var join=separated.join(' ');
+    console.log(join)   
+
+}
+
+converttoarray("The five boxing wizards jump quickly.");*/
+
 
 //your code...
 
+let functionfun = function ( val1, val2, val3){
 
+console.log(val1  + "' 'Numbers are noteworthy.")
+console.log(val2 + "' 'Strings are sassy.")
+console.log(val3 + "' 'Arrays are amazing.")
+
+}
+
+functionfun (54, 'horses', [3, 4, 6, 8])
 
 /************************************************************* */
 //Bonus assignments:
