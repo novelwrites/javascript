@@ -2,16 +2,28 @@
 
 /************************************************************* */
 // Problem 1: Refactor the for() loop to be a while loop.
-//
+//Original Code
 /*
 for(let i=0; i<10; i++) {
     console.log(" the value of i in the loop is : " + i);
 }*/
-
+//Nancy's comnments: for loop explanation to enhance understanding:
+//i = 0, 0 < 10 true, log 1 to console, i++
+//i = 1, 0 < 10 true, log 1 to console, i++
+//"
+//"
+//"
+//i = 10, 10 < 10 false, exit the loop!
 
 //your code...
 
+//Nancy's modifications: fairly straightforward and will be very usefuL!
 
+var i = 0;
+while(i < 10) {
+    console.log(" the value of i in the loop is : " + i);
+    i++;
+}  
 
 
 /************************************************************* */
@@ -22,25 +34,52 @@ for(let i=0; i<10; i++) {
 //after defining them, and print the answer to the console.
 
 //your code...
+//Nancy's comments: I tried different approaches and this was very fun to figure out! 
+//Good practice on using variables and math operators.
 
-/*
-let add = function ( num1, num2 ) {
-    var separated=wizards.split(' ');
-    console.log(separated)
-    var join=separated.join(' ');
-    console.log(join)   
+let add1 = function(num1, num2){
+
+ add1 = (num1 + num2);
+    
+ console.log(add1)
+ 
+}
+add1 (30,2)
+
+let multiply1 = function (add1){
+
+multiply1 = (add1 * 20);
+
+console.log(multiply1)
+
+}
+multiply1 (add1)
+
+
+let divide1 = function (multiply1){
+
+divide1 = (multiply1 / 10);
+
+console.log(divide1)
 
 }
 
-converttoarray("The five boxing wizards jump quickly.");
+divide1 (multiply1)
 
-*/
+let powerof2 = function (divide1){
+  
+ powerof2  = (divide1 ** 2 );  
 
+console.log(powerof2)
+}
 
+powerof2 (divide1)
 
 /************************************************************* */
 //Problem 3:
-//Determine whether the following values are "truthy" or "falsy".  console.log() the value, whether the value is 'truthy' or 'falsy', along with your reasoning why using String interpolation.
+//Determine whether the following values are "truthy" or "falsy".  console.log() 
+//the value, whether the value is 'truthy' or 'falsy', along with your reasoning 
+//why using String interpolation.
 // values : 
 // 20
 // 0
@@ -54,7 +93,27 @@ converttoarray("The five boxing wizards jump quickly.");
 // 125
 // undefined
 // ""
+/*
+let findfalsey = [ 20, 0, "zero", "const zero = 20",
+"null", "0", !"", {}, 125, "undefined", "" ];
+{
+    
+     console.log(findfalsey)
 
+for (let i = 0; i < findfalsey.length; i++)
+
+
+console.log(findfalsey[i]);
+
+
+if (findfalsey[1] === 0 || "0n" || "null", "undefined" || "false" || "Nan" ) 
+    console.log(findfalsey[i] + "  is false");
+ else 
+    console.log([findfalsey[i] + "  is true");
+} 
+findfalsey ()
+
+    
 
 
 
@@ -78,9 +137,9 @@ if(day === "monday") {
 } else {
     console.log("It's a weekend!")
 }
-
 */
-//Nancy's modification changing code to use switch statement
+//Nancy's modification: changing code to use switch statement. 
+//Nancy's comments: - Very straightforward and easy on the eyes.
 
 const day = "friday";
 switch (day) {
@@ -109,12 +168,16 @@ switch (day) {
 // Problem 5: Refactor the following functions to use a ternary expression:
 
 //Original
+/*
+
 const age = 10;
 if (age > 21) console.log("adult"); else {
     console.log("minor");
 }
+*/
 
-//Nancy's modification:
+//Nancy's modifications:
+//Nancy's comments: I learned two different ways so I did both :)
 
 age > 21 ? console.log("adult") //if block
   :  console.log("minor");      //else block
@@ -126,12 +189,12 @@ age > 21 ? console.log("adult") //if block
 
   //Original
 
-if (age > 13 && age < 19) console.log('teen'); else {
+/*if (age > 13 && age < 19) console.log('teen'); else {
     console.log("not a teenager");
-};
+};*/
 
-//Nancy's modification:
-
+//Nancy's modifications:
+//Nancy's comments: I learned two different ways so I did both :)
 age > 13 && age < 19 ? console.log('teen') //if block
    : console.log("not a teenager");        //else block
 
@@ -142,11 +205,12 @@ age > 13 && age < 19 ? console.log('teen') //if block
 
 //Original
 
-if (age > 65) console.log("retired"); else {
-    console.log("still working...");
+/*if (age > 65) console.log("retired"); else {
+    console.log("still working...");*/
 }
 
-//Nancy's modification:
+//Nancy's modifications:
+//Nancy's comments: I learned two different ways so I did both :)
 
 age > 65 ? console.log("retired") //if block
   :console.log("still working");  //else block
@@ -174,11 +238,14 @@ age > 65 ? console.log("retired") //if block
 */
 
 //your code...
-//nancy is an object. The left column is property names. The right column are values.
+//student is the object. The left column is property names. The right column are values.
 //Nancy comments: functions attached to objects are called methods.
-//Definition for this keyword: The JavaScript this keyword refers to the object it 
+//Definition for this keyword: The JavaScript "this" keyword refers to the object it 
 //belongs to. It has different values depending on where it is used: In a method, 
 //this refers to the owner object. Alone, this refers to the global object.
+
+//Nancy's comments: I really am young at heart :) great exercise to reinforce concepts!
+
 let student = { //student is the owner of the method
     firstName: 'Nancy',
     lastName: 'Golden',
@@ -188,29 +255,52 @@ let student = { //student is the owner of the method
     profession: 'teacher',
     education: 'masters degree',
     learn: function(){ //function expression (method)
-        return this.firstName + " " + this.lastName; //this means student
+        return this.firstName + " " + this.lastName;}, //this means student
         
-//learnmore: function(){ //function expression (method)
-//return this.hobbies; //this means student >> Why doesn't this work? How do you 
-//add additional methods?
-    
-    }
+    learnmore: function(){ //function expression (method)
+        return this.hobbies;
+    } //this means student 
 };
 console.log(student.learn());
+console.log(student.learnmore());
 //console.log(student.morelearn());
 //console.log(this.firstName + " " + this.lastName);
 /************************************************************* */
 // Problem 6: Create an object literal that represents any object in the real world that you like.  Try to come up with a realistic set of properties and methods that would accurately describe that object.  In at least one of your methods, use the this keyword to refer back to one of the properties you defined on this object literal.  
 
 //your code...  
-
-
+//Nancy's comments: Great property/values practice - love horses!
+let horse = {
+    barnNamename: 'Pistol',
+    regName: 'Pistol Bar T', 
+    breed: 'Quarterhorse',
+    ownerlastName: 'Golden',
+    ownerfirstName: 'Nancy',
+    age: 14,
+    gender: 'gelding',
+    disciplines: ['trail riding', 'trail obstacles'],
+    tack: 'western',
+}
 
 /************************************************************* */
 //Problem 7: create a function that outputs your 3 favorite data types, 
 //with a message explaining why you like that data type.
 
-/*let add = function ( num1, num2 ) {
+//your code...
+//Nancy's comments: simple solution :)
+let functionfun = function ( val1, val2, val3){
+
+console.log(val1 + "' 'Numbers are noteworthy.")
+console.log(val2 + "' 'Strings are sassy.")
+console.log(val3 + "' 'Arrays are amazing.")
+
+}
+
+functionfun (54, 'horses', [3, 4, 6, 8])
+
+/*************************************************************
+ * Function Syntax Example from my last assignment:
+ * /*let add = function ( num1, num2 ) {
     var separated=wizards.split(' ');
     console.log(separated)
     var join=separated.join(' ');
@@ -219,19 +309,6 @@ console.log(student.learn());
 }
 
 converttoarray("The five boxing wizards jump quickly.");*/
-
-
-//your code...
-
-let functionfun = function ( val1, val2, val3){
-
-console.log(val1  + "' 'Numbers are noteworthy.")
-console.log(val2 + "' 'Strings are sassy.")
-console.log(val3 + "' 'Arrays are amazing.")
-
-}
-
-functionfun (54, 'horses', [3, 4, 6, 8])
 
 /************************************************************* */
 //Bonus assignments:
