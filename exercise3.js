@@ -55,13 +55,33 @@ converttoarray("The five boxing wizards jump quickly.");*/
 /************************************************************* */
 
 // Problem 2:
-// Declare a variable that holds a string (e.g., ‘Learning JavaScript is fun!’). Replace a word so that the output uses the new word instead (e.g., ‘Learning JavaScript is cool!). 
+// Declare a variable that holds a string (e.g., ‘Learning JavaScript is fun!’). 
+//Replace a word so that the output uses the new word instead 
+//(e.g., ‘Learning JavaScript is cool!). 
 
 
 
 //your code...
 
+let wordreplace = function (strval) {
+let sentence = ["Learning", "JavaScript", "is", "fun", "!"]
 
+sentence[3] = strval
+let finalstr = (sentence[0] + " " + sentence[1] + " " + sentence[2] + " " + sentence[3]
+ + sentence[4]);
+console.log(finalstr)
+//console.log(sentence);
+}
+
+    /*if(strval === ""){ 
+        stringcontent=true;
+        //return stringcontent;
+        console.log("true");
+    }else 
+        //{strval=false;
+        console.log("false")}*/
+
+        wordreplace("amazing")
 
 
 /************************************************************* */
