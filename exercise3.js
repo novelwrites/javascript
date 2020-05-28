@@ -3,11 +3,50 @@
 /************************************************************* */
 
 // Problem 1:
-// Write a JavaScript function that determines whether a string is empty. If the string is empty, the output should be true, otherwise it should return false. 
+// Write a JavaScript function that determines whether a string is empty. 
+//If the string is empty, the output should be true, otherwise it should return false. 
+/*************************************************************
+ * Function Syntax Example from my last assignment for easy reference:
+ * /*let add = function ( num1, num2 ) {
+    var separated=wizards.split(' ');
+    console.log(separated)
+    var join=separated.join(' ');
+    console.log(join)   
 
+}
 
+converttoarray("The five boxing wizards jump quickly.");*/
+
+/* If/Then Syntax Example from my last assignment for easy reference:
+ //if (age > 21) console.log("adult"); else {
+        //console.log("minor");
+
+        //const day = "friday";
+
+//if(day === "monday") {
+    //console.log("we got a long week ahead of us...");
+//} else if(day === "tuesday") {
+    //console.log("tuesday's are still beterr than mondays, but LONG way to go still");
 
 //your code...
+
+*/
+
+    //let stringcontent - can come back to this later and use stringcontent 
+    //to store true or false and output stringcontent but works so let's move on!
+    let stringcheck = function (strval) {
+
+    if(strval === ""){ 
+        stringcontent=true;
+        //return stringcontent;
+        console.log("true");
+    }else 
+        //{strval=false;
+        console.log("false")}
+
+        stringcheck("")
+
+
 
 
 
