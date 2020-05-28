@@ -86,12 +86,28 @@ console.log(finalstr)
 
 /************************************************************* */
 // Problem 3:
-// Write a function that declares an array of numbers from one to five and returns another array with the squared value of each number from the first array. Use an arrow function and one of the built-in array methods. 
+// Write a function that declares an array of numbers from one to five 
+//and returns another array with the squared value of each number from 
+//the first array. Use an arrow function and one of the built-in array methods. 
 
 
 
 //your code...
 
+
+arrayreplace = () => {
+    
+    let array1 = [1, 2, 3, 4, 5, ]
+    let array2 = []
+    let i = 0
+    while (i < 5){ 
+        const container = array1[i]*2;
+        array2.push(container)
+        console.log(array2);
+        i++;
+    } 
+}
+    arrayreplace()
 
 
 
@@ -99,26 +115,52 @@ console.log(finalstr)
 
 /************************************************************* */
 // Problem 4:
-// Now declare another array of numbers that has the following numbers: 1, 3, 5, 7, 9, 1, 3, 5. Write a JavaScript program that returns an array of the numbers that are greater than 3. Use an arrow function and one of the built-in array methods.
+// Now declare another array of numbers that has the following numbers: 1, 3, 5, 7, 
+//9, 1, 3, 5. Write a JavaScript program that returns an array of the numbers that 
+//are greater than 3. Use an arrow function and one of the built-in array methods.
 
 
 
 //your code...
 
+arraycreate = () => {
+    
+    let array1 = [1, 3, 5, 7, 9, 1, 3, 5, ]
+    let array2 = []
+    let i = 0
+    while (i < 8){ 
+if (array1[i] > 3);
+let container = array1[i]; 
+array2.push(container)
+console.log(array2);
+    i++;
 
-
-
-
+    } 
+}
+   
 
 /************************************************************* */
 // Problem 5:
-// Now declare another array of numbers that has any 5 numbers. Write a JavaScript program that returns the sum of those numbers. Use an arrow function and one of the built-in array methods. 
+// Now declare another array of numbers that has any 5 numbers. 
+//Write a JavaScript program that returns the sum of those numbers. 
+//Use an arrow function and one of the built-in array methods. 
 
 
 
 //your code...
 
+arrayaddtogether = () => {
+    var array = [1, 2, 3, 4, 5];
+    
+    // Getting sum of numbers
+    var sum = array.reduce(function(a, b){
+        return a + b;
+    }, 0);
+    
+    console.log(sum); 
 
+}
+    arrayaddtogether()
 
 
 
@@ -192,3 +234,17 @@ function performer(cb) {
 /************************************************************* */
 //Bonus assignment:
 //research a new feature of ES6+ and create an example of it's use case here.  Be sure to write comments explaining what the feature is and why it is useful.
+/*
+arrayreplace = () => {
+    
+let array1 = [1, 2, 3, 4, 5]
+let array2
+array1[i] = 0 //reference error - i is not defined
+while (array1[i] < 5) 
+    container = array1[i]*2;
+    array2.push(container)
+    console.log(array2);
+    i++;
+}  
+arrayreplace()
+*/
