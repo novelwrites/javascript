@@ -34,7 +34,7 @@ while(i < 10) {
 //after defining them, and print the answer to the console.
 
 //your code...
-//Nancy's comments: I tried different approaches and this was very fun to figure out! 
+//Nancy's comments: I tried different approaches and this was VERY fun to figure out! 
 //Good practice on using variables and math operators.
 
 let add1 = function(num1, num2){
@@ -93,7 +93,10 @@ powerof2 (divide1)
 // 125
 // undefined
 // ""
-/*
+//your code...
+//Nancy's comments: I tried different approaches and really like using the 
+//OR operator. It still needs some work but the logic is in place.
+
 let findfalsey = [ 20, 0, "zero", "const zero = 20",
 "null", "0", !"", {}, 125, "undefined", "" ];
 {
@@ -106,15 +109,13 @@ for (let i = 0; i < findfalsey.length; i++)
 console.log(findfalsey[i]);
 
 
-if (findfalsey[1] === 0 || "0n" || "null", "undefined" || "false" || "Nan" ) 
+if (findfalsey[i] == 0 || "0n" || "null", "undefined" || "false" || "Nan" ) 
     console.log(findfalsey[i] + "  is false");
  else 
-    console.log([findfalsey[i] + "  is true");
+    console.log(findfalsey[i] + " is true");
+
 } 
 findfalsey ()
-
-    
-
 
 
 /************************************************************* */
@@ -206,8 +207,8 @@ age > 13 && age < 19 ? console.log('teen') //if block
 //Original
 
 /*if (age > 65) console.log("retired"); else {
-    console.log("still working...");*/
-}
+    console.log("still working...");
+}*/
 
 //Nancy's modifications:
 //Nancy's comments: I learned two different ways so I did both :)
@@ -263,8 +264,7 @@ let student = { //student is the owner of the method
 };
 console.log(student.learn());
 console.log(student.learnmore());
-//console.log(student.morelearn());
-//console.log(this.firstName + " " + this.lastName);
+
 /************************************************************* */
 // Problem 6: Create an object literal that represents any object in the real world that you like.  Try to come up with a realistic set of properties and methods that would accurately describe that object.  In at least one of your methods, use the this keyword to refer back to one of the properties you defined on this object literal.  
 
@@ -299,7 +299,7 @@ console.log(val3 + "' 'Arrays are amazing.")
 functionfun (54, 'horses', [3, 4, 6, 8])
 
 /*************************************************************
- * Function Syntax Example from my last assignment:
+ * Function Syntax Example from my last assignment for easy reference:
  * /*let add = function ( num1, num2 ) {
     var separated=wizards.split(' ');
     console.log(separated)
