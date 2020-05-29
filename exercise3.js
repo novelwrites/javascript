@@ -129,15 +129,17 @@ arraycreate = () => {
     let array2 = []
     let i = 0
     while (i < 8){ 
-if (array1[i] > 3);
+if (array1[i] > 3){
 let container = array1[i]; 
-array2.push(container)
+array2.push(container);
 console.log(array2);
+//console.log(container)
+}
     i++;
 
     } 
 }
-   
+arraycreate ()  
 
 /************************************************************* */
 // Problem 5:
@@ -169,13 +171,14 @@ arrayaddtogether = () => {
 // Problem 6:
 // DNA is made up of base pairs where every G is paired with a C and every T is paired with an A. 
 
-// Write a function that takes in a DNA string as a parameter and returns an array with the complementary strand. For example, a string of "GCTA" would return an array of ["C", "G", "A", "T"].  
+// Write a function that takes in a DNA string as a parameter and returns an array with the 
+//complementary strand. For example, a string of "GCTA" would return an array of ["C", "G", "A", "T"].  
 
 
 
 //your code...
 
-
+//take string convert to an array for loop and indexed it check for string replaced it
 
 
 
@@ -183,8 +186,11 @@ arrayaddtogether = () => {
 /************************************************************* */
 // Problem 7:
 
-// 7.a - Write a function to find the maximum numerical value of the given array.  Get rid of any non numerical values.  Convert the strings that are numbers to an actual number data type.  ("one" => 1) ("1" => 1).  Use array methods to perform this task.  
-const numbers = [2,23,1,2,1,1,1,2,2.5,20,200,2000,,{k:1},20000,19999,1878,140,23,4,"sk",true,true,"true-dat","nice","one","two","three","3","tea",[]];
+// 7.a - Write a function to find the maximum numerical value of the given array.  
+//Get rid of any non numerical values.  Convert the strings that are numbers to an 
+//actual number data type.  ("one" => 1) ("1" => 1).  Use array methods to perform this task.  
+const numbers = [2,23,1,2,1,1,1,2,2.5,20,200,2000,,{k:1},20000,19999,1878,140,23,4,"sk",true,
+true,"true-dat","nice","one","two","three","3","tea",[]];
 
 function maxNumber(numbers) {
     //your code...
@@ -218,8 +224,19 @@ console.log(mapObj.has({company : "TEKsystems"}));
 /************************************************************* */
 //Problem 11:
 
-let ones = [1,11,111,1111,11111,111111,1111111,11111111,111111111,1111111111];
+//let ones = [1,11,111,1111,11111,111111,1111111,11111111,111111111,1111111111];
 //reverse the array, without modifying the ones array.
+
+arrayreverse = () => {
+    
+    const ones = [1,11,111,1111,11111,111111,1111111,11111111,111111111,1111111111];
+    let onesReverse = []
+    onesReverse = [...ones].reverse()
+        console.log(ones)
+        console.log(onesReverse);
+       
+}
+    arrayreverse()
 
 
 /************************************************************* */
