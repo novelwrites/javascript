@@ -169,14 +169,40 @@ arrayaddtogether = () => {
 
 /************************************************************* */
 // Problem 6:
-// DNA is made up of base pairs where every G is paired with a C and every T is paired with an A. 
+// DNA is made up of base pairs where every G is paired with a C and every T
+// is paired with an A. 
 
-// Write a function that takes in a DNA string as a parameter and returns an array with the 
-//complementary strand. For example, a string of "GCTA" would return an array of ["C", "G", "A", "T"].  
+// Write a function that takes in a DNA string as a parameter and returns an
+//array with the complementary strand. For example, a string of "GCTA" would
+//return an array of ["C", "G", "A", "T"].  
 
 
 
 //your code...
+
+arrayDNA = () => {
+    
+    let arrayDNA1 = ['G', 'C','T', 'A' ]
+    let arrayDNA2 = []
+    let i = 0
+    while (i < 4){ 
+   (arrayDNA1[i] === 'G') 
+    arrayDNA2.push('C');
+   (arrayDNA1[i] === 'C') 
+    arrayDNA2.push('G');
+   (arrayDNA1[i] === 'T') 
+    arrayDNA2.push('A');
+   (arrayDNA1[i] === 'A') 
+    arrayDNA2.push('T');
+    console.log(arrayDNA1);
+    console.log(arrayDNA2);
+    
+    i++;
+    }
+}
+
+arrayDNA ()  
+       
 
 //take string convert to an array for loop and indexed it check for string replaced it
 
@@ -206,7 +232,7 @@ function sortNums(numbers,desc=false) {
 
 
 /************************************************************* */
-// Problem 8:
+// Problem 8: NOTE: Amir said not due since we haven't learned about it yet.
 //add an example of at least 5 JavaScript data types to the given mapObj.  The key is the example data type, and the value is the name of the data type.  An object data type has already been set as the 1st key / val pair.
 
 const mapObj = new Map();
@@ -241,7 +267,9 @@ arrayreverse = () => {
 
 /************************************************************* */
 //Problem 12:
-//create a function called performer(cb) that takes in a callback function and runs that callback function.  It should return the output of the callback function.
+//create a function called performer(cb) that takes in a callback 
+//function and runs that callback function.  It should return the 
+//output of the callback function.
 
 function performer(cb) {
     //code goes here
