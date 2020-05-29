@@ -6,34 +6,11 @@
 // Write a JavaScript function that determines whether a string is empty. 
 //If the string is empty, the output should be true, otherwise it should return false. 
 /*************************************************************
- * Function Syntax Example from my last assignment for easy reference:
- * /*let add = function ( num1, num2 ) {
-    var separated=wizards.split(' ');
-    console.log(separated)
-    var join=separated.join(' ');
-    console.log(join)   
-
-}
-
-converttoarray("The five boxing wizards jump quickly.");*/
-
-/* If/Then Syntax Example from my last assignment for easy reference:
- //if (age > 21) console.log("adult"); else {
-        //console.log("minor");
-
-        //const day = "friday";
-
-//if(day === "monday") {
-    //console.log("we got a long week ahead of us...");
-//} else if(day === "tuesday") {
-    //console.log("tuesday's are still beterr than mondays, but LONG way to go still");
-
+ 
 //your code...
-
+Nancy's comments: It's getting more intuitive - I am starting to get used to the syntax :)
 */
 
-    //let stringcontent - can come back to this later and use stringcontent 
-    //to store true or false and output stringcontent but works so let's move on!
     let stringcheck = function (strval) {
 
     if(strval === ""){ 
@@ -47,11 +24,6 @@ converttoarray("The five boxing wizards jump quickly.");*/
         stringcheck("")
 
 
-
-
-
-
-
 /************************************************************* */
 
 // Problem 2:
@@ -59,7 +31,7 @@ converttoarray("The five boxing wizards jump quickly.");*/
 //Replace a word so that the output uses the new word instead 
 //(e.g., ‘Learning JavaScript is cool!). 
 
-
+//Nancy's comments: This one was fun and easier for me then it would have been 2 days ago! Progress!
 
 //your code...
 
@@ -70,18 +42,10 @@ sentence[3] = strval
 let finalstr = (sentence[0] + " " + sentence[1] + " " + sentence[2] + " " + sentence[3]
  + sentence[4]);
 console.log(finalstr)
-//console.log(sentence);
+
 }
 
-    /*if(strval === ""){ 
-        stringcontent=true;
-        //return stringcontent;
-        console.log("true");
-    }else 
-        //{strval=false;
-        console.log("false")}*/
-
-        wordreplace("amazing")
+        wordreplace("amazing") //put whatever string you want to pass for the last word
 
 
 /************************************************************* */
@@ -90,10 +54,8 @@ console.log(finalstr)
 //and returns another array with the squared value of each number from 
 //the first array. Use an arrow function and one of the built-in array methods. 
 
-
-
+//Nancy's comments: great exercise in getting syntax correct and using array index
 //your code...
-
 
 arrayreplace = () => {
     
@@ -109,10 +71,6 @@ arrayreplace = () => {
 }
     arrayreplace()
 
-
-
-
-
 /************************************************************* */
 // Problem 4:
 // Now declare another array of numbers that has the following numbers: 1, 3, 5, 7, 
@@ -120,7 +78,7 @@ arrayreplace = () => {
 //are greater than 3. Use an arrow function and one of the built-in array methods.
 
 
-
+//Nancy's comments: Another great exercise to reinforce basic concepts
 //your code...
 
 arraycreate = () => {
@@ -148,7 +106,7 @@ arraycreate ()
 //Use an arrow function and one of the built-in array methods. 
 
 
-
+//Nancy's comments: This was fun - I found the reduce method to accomplish this with a lot less code
 //your code...
 
 arrayaddtogether = () => {
@@ -165,8 +123,6 @@ arrayaddtogether = () => {
     arrayaddtogether()
 
 
-
-
 /************************************************************* */
 // Problem 6:
 // DNA is made up of base pairs where every G is paired with a C and every T
@@ -176,13 +132,11 @@ arrayaddtogether = () => {
 //array with the complementary strand. For example, a string of "GCTA" would
 //return an array of ["C", "G", "A", "T"].  
 
-
-
+//Nancy's comments: push comes in handy!
 //your code...
 
-arrayDNA = () => {
+arrayDNA = ([arrayDNA1]) => {
     
-    let arrayDNA1 = ['G', 'C','T', 'A' ]
     let arrayDNA2 = []
     let i = 0
     while (i < 4){ 
@@ -201,12 +155,8 @@ arrayDNA = () => {
     }
 }
 
-arrayDNA ()  
+arrayDNA ('G', 'C','T', 'A' )  
        
-
-//take string convert to an array for loop and indexed it check for string replaced it
-
-
 
 
 /************************************************************* */
@@ -214,23 +164,34 @@ arrayDNA ()
 
 // 7.a - Write a function to find the maximum numerical value of the given array.  
 //Get rid of any non numerical values.  Convert the strings that are numbers to an 
-//actual number data type.  ("one" => 1) ("1" => 1).  Use array methods to perform this task.  
+//actual number data type.  ("one" => 1) ("1" => 1).  Use array methods to perform this task. 
+
+//Nancy's comments: got a good start and have some ideas - need more research
 const numbers = [2,23,1,2,1,1,1,2,2.5,20,200,2000,,{k:1},20000,19999,1878,140,23,4,"sk",true,
 true,"true-dat","nice","one","two","three","3","tea",[]];
 
 function maxNumber(numbers) {
-    //your code...
+    let numArray = [];
+
+    for(var i = 0; i < numbers.length; i++) {
+        if (typeof(numbers[i] === 'number') {
+            numArray = numbers[i];
+        } else if (typeof(numbers[i] === undefined) {
+            numbers.splice(i, 1);
+        } else if (typeof(numbers[i] === 'string') {
+            numbers.splice(i, 1);
+
+    }
+
+
 }
 
 // 7.b -Write a function that sorts the given numbers array.  Allow the function to sort the array in descending order
 
 function sortNums(numbers,desc=false) {
-    //your code...
+    //your code...in the future - I went on to the next problem because it is after midnight
+    // and I need to get some rest
 };
-
-
-
-
 /************************************************************* */
 // Problem 8: NOTE: Amir said not due since we haven't learned about it yet.
 //add an example of at least 5 JavaScript data types to the given mapObj.  The key is the example data type, and the value is the name of the data type.  An object data type has already been set as the 1st key / val pair.
@@ -249,7 +210,7 @@ console.log(mapObj.has({company : "TEKsystems"}));
 
 /************************************************************* */
 //Problem 11:
-
+//Nancy's comments - short and sweet - this was fun!
 //let ones = [1,11,111,1111,11111,111111,1111111,11111111,111111111,1111111111];
 //reverse the array, without modifying the ones array.
 
@@ -270,11 +231,30 @@ arrayreverse = () => {
 //create a function called performer(cb) that takes in a callback 
 //function and runs that callback function.  It should return the 
 //output of the callback function.
-
-function performer(cb) {
+//Nancy's comments: Was a little difficult to understand at first but I think I have grasped
+//the concept. Two separate tasks - one is called inside the other...
     //code goes here
+
+function performer(val, cb){ //creates function that will run callback
+    if(val == 1){
+        cb(true);
+    }else{
+        cb(false);
+    }
 }
 
+function checkbool (){ //the true or false (boolean) are passed from callback() 
+    //and something can happen because of that value (in my code - a console.log
+    //that says what was passed)
+
+    if(cb === true){
+        console.log("the cb passed a true value");
+    }else{
+        console.log("the cb passed a false value");
+    }
+}
+
+checkbool()
 
 /************************************************************* */
 //Bonus assignment:
