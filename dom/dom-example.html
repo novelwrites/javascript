@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simple DOM example</title>
+    
+    <!--Below style inserted for example of general HTML manipulation:
+    
+    Element.setAttribute() — this takes two arguments, the attribute you 
+    want to set on the element, and the value you want to set it to.
+     In this case we will set a class name of highlight on our paragraph: see 
+     in <script> para.setAttribute('class', 'highlight') This gives it a class
+         selected by our CSS rule, not as inline CSS styles;-->
+    <style>
+        .highlight {
+          color: white;
+          background-color: black;
+          padding: 10px;
+          width: 250px;
+          text-align: center;
+        }
+        </style>
+  </head>
+  <body>
+      <section>
+        <img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
+        <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
+      </section>
+      <script>
+          const link = document.querySelector('a'); //element reference is 
+          //stored in a variable and we can start manipulating it.
+          link.textContent = 'Mozilla Developer Network'; //updates value of
+          //Node.textContent
+          link.href = 'http://developer.mozilla.org'; //change url to developer
+          //.mozilla.org
+          
+          //Creating and placing new nodes
+          const sect = document.querySelector('section');//reference section element
+          const para = document.createElement('p');
+para.textContent = 'We hope you enjoyed the ride.'; //created a new paragraph
+sect.appendChild(para); //append new paragraph to end of section
+const text = document.createTextNode(' — the premier source for web development knowledge.');//create a text node
+const linkPara = document.querySelector('p'); //grabs a reference to the paragraph the link is
+//inside and appends the text node to it.
+linkPara.appendChild(text); 
+
+//Moving and removing elements
+sect.appendChild(linkPara); //moves paragraph to bottom of section
+//sect.removeChild(linkPara); //removes paragraph from section
+linkPara.parentNode.removeChild(linkPara); //removes node
+
+//The first way is to add inline styles directly onto elements you want to 
+//dynamically style. This is done with the HTMLElement.style property, 
+//which contains inline styling information for each element in the document. 
+//You can set properties of this object to directly update element styles.
+//para.style.color = 'white';
+//para.style.backgroundColor = 'black';
+//para.style.padding = '10px';
+//para.style.width = '250px';
+//para.style.textAlign = 'center';
+//The second way (see notes at top)
+para.setAttribute('class', 'highlight');
+
+      </script>
+  </body>
+</html>
