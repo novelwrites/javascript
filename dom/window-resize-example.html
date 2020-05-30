@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Window resize example</title>
+    <style>
+      body {
+        margin: 0;
+      }
+/* Represents app UI area - we want it to be as big as the window it is
+viewed in - whatever size that may be*/
+      div {
+        box-sizing: border-box;
+        width: 100px;
+        height: 100px;
+        background-image: url(bgtile.png);
+        border: 10px solid white;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div>
+
+    </div>
+
+    <script>
+//Grabs a reference to the div, and then grabs the width and height of the 
+//viewport (the inner window, where our document is displayed) and stores 
+//them in variables — these two values are contained in the Window.innerWidth 
+//and Window.innerHeight properties
+const div = document.querySelector('div');
+let winWidth = window.innerWidth;
+let winHeight = window.innerHeight;
+
+//below we dynamically alter the width and the height of the div to equal
+// that of the viewport:
+div.style.width = winWidth + 'px';
+div.style.height = winHeight + 'px';
+//This adds an event so that div resizes as we resize the window:
+window.onresize = function() {
+  winWidth = window.innerWidth;
+  winHeight = window.innerHeight;
+  div.style.width = winWidth + 'px';
+  div.style.height = winHeight + 'px';
+}
+    </script>
+  </body>
+</html>
