@@ -4,8 +4,9 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="shopping-list.css"
     <title>Shopping list example</title>
-    <style>
+    <!--<style>
       li {
         margin-bottom: 10px;
       }
@@ -15,7 +16,7 @@
         margin-left: 20px;
         color: #666;
       }
-    </style>
+    </style>-->
   </head>
   <body>
 
@@ -32,7 +33,39 @@
     </ul>
 
     <script>
-
+//Create three variables that hold references to 
+//the list (<ul>), <input>, and <button> elements.
+          const unorderedList = document.querySelector('ul'); //element reference is 
+          //stored in a variable and we can start manipulating it.
+          const input = document.querySelector('input'); //element reference is 
+          //stored in a variable and we can start manipulating it.
+          const button = document.querySelector('button'); //element reference is 
+          //stored in a variable and we can start manipulating it.
+          //Create a function that will run in response to the button being clicked.
+           //button.onclick assigns an onclick event to a button element
+          button.onclick = function() { 
+           //Inside the function body, start off by storing the current value of 
+           //the input element in a variable.
+            let enteredItem = input.value;
+            //Next, empty the input element by setting its value to an empty string — ''.
+           input.value = "";
+//Create three new elements — a list item (<li>), <span>, and <button>, 
+//and store them in variables.
+const listItem = document.createElement('li')
+const spanItem = document.createElement('span')
+const buttonItem = document.createElement ('button')
+//Append the span and the button as children of the list item.
+listItem.appendChild(spanItem);
+listItem.appendChild(buttonItem);
+//Set the text content of the span to the input element value
+// you saved earlier, and the text content of the button to 'Delete'.
+spanItem.textcontent = enteredItem
+buttonItem.textcontent = "Delete";
+//Append the list item as a child of the list.
+unorderedList.appendChild(ListItem);
+//Attach an event handler to the delete button,
+//so that when clicked it will delete the entire list item it is inside.
+          }
     </script>
   </body>
 </html>
