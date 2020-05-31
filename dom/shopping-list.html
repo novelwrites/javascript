@@ -65,7 +65,25 @@ buttonItem.textcontent = "Delete";
 unorderedList.appendChild(ListItem);
 //Attach an event handler to the delete button,
 //so that when clicked it will delete the entire list item it is inside.
-          }
+buttonItem.onclick = function (e){
+    listItem.removeChild(spanItem);
+                }      
+ //use the focus() method to focus the input element ready for entering
+ // the next shopping list item. 
+ 
+ input.focus();
+              
+              }
     </script>
   </body>
 </html>
+
+<!--Full Disclosure: The MDN Document contains the same exercise as our 
+  assignment at the bottom along with a link to the answer. I carefully worked
+  through the MDN document including creating files to work through the code 
+  examples which I uploaded to github and when I got to the exercise I worked 
+  on my code but when I became stuck I studied their answer to better understand 
+  what to do. I did not fully rely on it but also surfed online for what I needed
+  to understand. I did not copy and paste and I coded my own responses to each 
+  step.--
+  
