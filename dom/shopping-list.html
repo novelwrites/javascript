@@ -46,7 +46,7 @@
           button.onclick = function() { 
            //Inside the function body, start off by storing the current value of 
            //the input element in a variable.
-            let enteredItem = input.value;
+            const enteredItem = input.value;
             //Next, empty the input element by setting its value to an empty string — ''.
            input.value = "";
 //Create three new elements — a list item (<li>), <span>, and <button>, 
@@ -59,14 +59,14 @@ listItem.appendChild(spanItem);
 listItem.appendChild(buttonItem);
 //Set the text content of the span to the input element value
 // you saved earlier, and the text content of the button to 'Delete'.
-spanItem.textcontent = enteredItem
-buttonItem.textcontent = "Delete";
+spanItem.textContent = enteredItem;
+buttonItem.textContent = "Delete";
 //Append the list item as a child of the list.
-unorderedList.appendChild(ListItem);
+unorderedList.appendChild(listItem);
 //Attach an event handler to the delete button,
 //so that when clicked it will delete the entire list item it is inside.
 buttonItem.onclick = function (e){
-    listItem.removeChild(spanItem);
+    unorderedList.removeChild(listItem);
                 }      
  //use the focus() method to focus the input element ready for entering
  // the next shopping list item. 
